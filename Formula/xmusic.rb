@@ -7,9 +7,9 @@
 class Xmusic < Formula
   desc "Terminal client for YouTube Music"
   homepage "https://github.com/alienstro/xMusic"
-  url "https://github.com/alienstro/xMusic/archive/refs/tags/v0.2.3.tar.gz"
+  url "https://github.com/alienstro/xMusic/archive/refs/tags/v0.3.1.tar.gz"
   # publish.sh fills this in from the tagged tarball; see packaging/homebrew/README.md.
-  sha256 "c34350646b506d9c4f1bd0aa47a6ba5923a83de73a9fa56f73aba75d53d5a8d6"
+  sha256 "5f2d500e7f99c9af4f809e131768b76dd922e5ff4c7045dca7b671813c61261a"
   license "MIT"
   head "https://github.com/alienstro/xMusic.git", branch: "main"
 
@@ -31,16 +31,17 @@ class Xmusic < Formula
       keeps playing after you quit the interface, and survives closing the
       terminal. To stop it:
 
-        xmusic --kill-daemon
+        xmusic stop
 
       Search and playback work without signing in. Google will not accept a
       sign-in from an embedded webview, so to use your own account you sign in
       with your normal browser and xmusic copies that session across: press L
-      (or run `xmusic --login`), sign in when your browser opens, then press L
+      (or run `xmusic login`), sign in when your browser opens, then press L
       again. macOS will ask once for keychain permission, which is what lets
       xmusic decrypt the browser's cookies.
 
-        xmusic --uninstall    # stop the daemon and delete its data
+        xmusic uninstall      # stop the daemon and delete its data
+        xmusic update         # replace both binaries with the newest release
 
       The daemon logs to ~/.xmusic/daemon.log and listens on 127.0.0.1:13723.
     EOS
