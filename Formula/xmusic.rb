@@ -7,9 +7,9 @@
 class Xmusic < Formula
   desc "Terminal client for YouTube Music"
   homepage "https://github.com/alienstro/xMusic"
-  url "https://github.com/alienstro/xMusic/archive/refs/tags/v0.3.6.tar.gz"
+  url "https://github.com/alienstro/xMusic/archive/refs/tags/v0.3.7.tar.gz"
   # publish.sh fills this in from the tagged tarball; see packaging/homebrew/README.md.
-  sha256 "8246b822db56c702841a023512884ffdb6dc4b2a1b8eb040ff9f04b601c33162"
+  sha256 "bbeadc9aaddcbcb0417fbdfefc6cbedec3b25beab4972af6e965d80f5d318204"
   license "MIT"
   head "https://github.com/alienstro/xMusic.git", branch: "main"
 
